@@ -62,9 +62,19 @@ public class TargetingReticleController : MonoBehaviour
         worldAimPoint = cameraRay.GetPoint(aimDistance);
 
         Debug.DrawRay(start: cameraRay.origin, dir: cameraRay.direction * aimDistance, Color.yellow);
-        Vector3 aimDirection = GetAimDirection(aimOrigin.position);
 
-        Debug.DrawLine(aimOrigin.position, worldAimPoint, Color.cyan);
+        if (aimOrigin != null)
+        {
+            Vector3 aimDirection = GetAimDirection(aimOrigin.position);
+
+            Debug.DrawLine(aimOrigin.position, worldAimPoint, Color.cyan);
+        }
+        else
+        {
+            Debug.LogWarning("Skipped Debug.DrawLine because aimOrigin was null.");
+            targetingReticle.gameObject.SetActive(false);
+        }
+
 
     }
 

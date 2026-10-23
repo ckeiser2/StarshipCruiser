@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8245094625238699908}
   - component: {fileID: 3879451153387890328}
   - component: {fileID: 33937700837639244}
+  - component: {fileID: 2645818947572231666}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -106,12 +107,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2645818947572231666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204542329737309010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4aafccae733b0044a0a034cf1ab1706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageVolume
+  damageAmount: 1
 --- !u!1 &2742634598330770815
 GameObject:
   m_ObjectHideFlags: 0
